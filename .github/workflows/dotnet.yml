@@ -21,5 +21,8 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+    - name: rm quick config
+      run: winrm quickconfig -quiet
+      shell: powershell
     - name: Test
       run: dotnet test --no-build --verbosity normal
