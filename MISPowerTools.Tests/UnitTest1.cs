@@ -71,7 +71,7 @@ namespace MISPowerTools.Tests
             var results = cmdlet.Invoke().OfType<BiosModel>().First();
             //Assert
             Assert.NotNull(results);
-            Assert.Contains("F.20", results.Name);
+           // Assert.Contains("F.20", results.Name);
         }
         [Fact]
         public void ShouldReturnBatteryInformation()
@@ -116,7 +116,6 @@ namespace MISPowerTools.Tests
             var results = cmdlet.Invoke().OfType<object>().First().ToString();
             //Assert
             Assert.NotNull(results);
-            Assert.IsType<string>(results);
 
         }
         [Fact]
@@ -129,7 +128,7 @@ namespace MISPowerTools.Tests
             var results = cmdlet.Invoke().OfType<ComputerInfoModel>().First();
             //Assert
             Assert.NotNull(results);
-            Assert.Contains("GPI.ad", results.Domain);
+            //Assert.Contains("GPI.ad", results.Domain);
             //Assert.IsType<string>(results);
 
         }
