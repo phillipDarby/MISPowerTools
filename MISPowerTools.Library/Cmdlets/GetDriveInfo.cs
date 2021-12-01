@@ -66,34 +66,6 @@ namespace MISPowerTools.Library.Cmdlets
                 Console.WriteLine(ex.Message);
             }
 
-            //ManagementObjectSearcher mos = new ManagementObjectSearcher(new SelectQuery("SELECT * FROM WIN32_LogicalDisk"));
-
-            //foreach (ManagementObject mo in mos.Get())
-            //{
-            //    var drivetype = mo.GetPropertyValue("DriveType").ToString();
-            //    if (drivetype == "3")
-            //    {
-                   
-            //        var freeSpace = (UInt64)mo.GetPropertyValue("FreeSpace") / Math.Pow(1024, 3);
-            //        var totalSpace = (UInt64)mo.GetPropertyValue("Size") / Math.Pow(1024, 3);
-            //        var description = mo.GetPropertyValue("DeviceId").ToString();
-            //        var totalUsed = totalSpace - freeSpace;
-            //        var percentUsed = (totalUsed * 100) / totalSpace;
-            //        var percentFree = 100 - percentUsed;
-                    
-            //        drives.Add(new DriveSpace
-            //        {
-            //            FreeSpace = freeSpace,
-            //            TotalSpace = totalSpace,
-            //            Description = description,
-            //            TotalUsed = totalUsed,
-            //            PercentUsed = percentUsed,
-            //            PercentFree = percentFree
-            //        });
-            //    }
-                
-
-            //}
             return drives;
         }
         static Dictionary<string, object> GetKeyPropertiesAndValues(CimSession cimSession, string cimNamespace, string cimClassName)
