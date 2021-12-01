@@ -73,28 +73,28 @@ namespace MISPowerTools.Tests
             Assert.NotNull(results);
            // Assert.Contains("F.20", results.Name);
         }
-        [Fact]
-        public void ShouldReturnBatteryInformation()
-        {
-            var cmdlet = new GetBatteryInfo();
+        //[Fact]
+        //public void ShouldReturnBatteryInformation()
+        //{
+        //    var cmdlet = new GetBatteryInfo();
 
-            //Act
+        //    //Act
 
-            var results = cmdlet.Invoke().OfType<string>().First();
-            //Assert
-            Assert.IsType<string>(results);
-        }
-        [Fact]
-        public void ShouldReturnCpuInformation()
-        {
-            var cmdlet = new GetCpuInfo();
+        //    var results = cmdlet.Invoke().OfType<string>().First();
+        //    //Assert
+        //    Assert.IsType<string>(results);
+        //}
+        //[Fact]
+        //public void ShouldReturnCpuInformation()
+        //{
+        //    var cmdlet = new GetCpuInfo();
 
-            //Act
+        //    //Act
 
-            var results = cmdlet.Invoke().OfType<string>().First();
-            //Assert
-            Assert.IsType<string>(results);
-        }
+        //    var results = cmdlet.Invoke().OfType<string>().First();
+        //    //Assert
+        //    Assert.IsType<string>(results);
+        //}
         [Fact]
         public void ShouldReturnDriveInformation()
         {
